@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="File">
+
+    <resultMap type="edu.bjtu.fileshare.entity.Course" id="InnerCourseResult">
+        <id column="COURSE_ID" jdbcType="INTEGER" property="courseId"/>
+        <result column="COURSE_NAME" jdbcType="VARCHAR" property="courseName"/>
+        <result column="COURSE_DEPARTMENT" jdbcType="VARCHAR" property="department"/>
+    </resultMap>
+    
+    <resultMap id="FileResult" type="edu.bjtu.fileshare.entity.File">
+        <id column="FILE_ID" property="fileId"/>
+        <result column="FILE_NAME" property="fileName"/>
+        <result column="FILE_TEACHER" property="teacher"/>
+        <result column="FILE_SIZE" property="size"/>
+        <result column="FILE_LOCATION" property="location"/>
+        <result column="FILE_DESCRIPTION" property="description"/>
+        <result column="FILE_UPLOADDATE" property="uploadDate"/>
+        <association property="course" column="FILE_COURSEID" javaType="edu.bjtu.fileshare.entity.Course" resultMap="InnerCourseResult"/>
+    </resultMap>
+
+    <select id="queryFilesbyDepartmnet" resultMap="FileResult">
+        SELECT
+          F.ID AS FILE_ID,
+          F.FILENAME AS FILE_NAME,
+          F.TEACHER AS FILE_TEACHER,
+          F.SIZE AS FILE_SIZE,
+          F.LOCATION AS FILE_LOCATION,
+          F.DESCRIPTION AS FILE_DISCRIPTION,
+          F.UPLOADDATE AS FILE_UPLOADDATE,
+          F.COURSE_ID AS FILE_COURSEID,
+          C.ID AS COURSE_ID,
+          C.NAME AS COURSE_NAME,
+          C.DEPARTMENT AS COURSE_DEPARTMENT
+        FROM fileshare.FILE F INNER JOIN COURSES C ON F.COURSE_ID = C.ID
+        WHERE C.DEPARTMENT = #{department}
+    </select>
+
+    <select id="queryFilesbyCourseId" resultMap="FileResult">
+        SELECT
+        F.ID AS FILE_ID,
+        F.FILENAME AS FILE_NAME,
+        F.TEACHER AS FILE_TEACHER,
+        F.SIZE AS FILE_SIZE,
+        F.LOCATION AS FILE_LOCATION,
+        F.DESCRIPTION AS FILE_DISCRIPTION,
+        F.UPLOADDATE AS FILE_UPLOADDATE,
+        F.COURSE_ID AS FILE_COURSEID,
+        C.ID AS COURSE_ID,
+        C.NAME AS COURSE_NAME,
+        C.DEPARTMENT AS COURSE_DEPARTMENT
+        FROM fileshare.FILE F INNER JOIN COURSES C ON F.COURSE_ID = C.ID
+        WHERE C.ID = #{courseid}
+    </select>
+
+    <select id="queryFilesbyId" resultMap="FileResult">
+        SELECT
+        F.ID AS FILE_ID,
+        F.FILENAME AS FILE_NAME,
+        F.TEACHER AS FILE_TEACHER,
+        F.SIZE AS FILE_SIZE,
+        F.LOCATION AS FILE_LOCATION,
+        F.DESCRIPTION AS FILE_DISCRIPTION,
+        F.UPLOADDATE AS FILE_UPLOADDATE,
+        F.COURSE_ID AS FILE_COURSEID,
+        C.ID AS COURSE_ID,
+        C.NAME AS COURSE_NAME,
+        C.DEPARTMENT AS COURSE_DEPARTMENT
+        FROM fileshare.FILE F INNER JOIN COURSES C ON F.COURSE_ID = C.ID
+        WHERE F.ID = #{id}
+    </select>
+
+    <insert id="insertFile" parameterType="edu.bjtu.fileshare.entity.File">
+        insert INTO FILE(FILENAME,SIZE, COURSE_ID, TEACHER, LOCATION, DESCRIPTION, UPLOADDATE)
+        values(#{fileName}, #{size}, #{course.courseId}, #{teacher}, #{location}, #{description}, #{uploadDate})
+    </insert>
+
+    <delete id="deleteFile" parameterType="Integer">
+        delete from FILE where ID=#{id}
+    </delete>
+</mapper>

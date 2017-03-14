@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Course">
+
+    <resultMap type="edu.bjtu.fileshare.entity.Course" id="CourseResult">
+        <id column="ID" jdbcType="INTEGER" property="courseId"/>
+        <result column="NAME" jdbcType="VARCHAR" property="courseName"/>
+        <result column="DEPARTMENT" jdbcType="VARCHAR" property="department"/>
+    </resultMap>
+
+    <select id="queryAllCourses" resultMap="CourseResult">
+        select ID, NAME, DEPARTMENT
+        from COURSES
+    </select>
+
+    <select id="queryCoursesbyDepartment" resultMap="CourseResult">
+        select ID, NAME, DEPARTMENT
+        from COURSES
+        where DEPARTMENT = #{department}
+    </select>
+
+    <select id="queryCoursesbyId" resultMap="CourseResult">
+        select ID, NAME, DEPARTMENT
+        from COURSES
+        where ID = #{id}
+    </select>
+
+    <insert id="insertCourse" parameterType="edu.bjtu.fileshare.entity.Course">
+        insert INTO COURSES(NAME, DEPARTMENT)
+        values(#{courseName}, #{department})
+    </insert>
+
+    <delete id="deleteCourse" parameterType="Integer">
+        delete from COURSES where ID=#{id}
+    </delete>
+</mapper>

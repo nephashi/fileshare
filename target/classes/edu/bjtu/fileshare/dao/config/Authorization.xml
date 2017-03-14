@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Authorization">
+
+    <select id="queryAllAuthorization" resultType="java.lang.String">
+        SELECT A.ADDRESS FROM AUTHORIZED A
+    </select>
+
+    <select id="queryAuthorizationbyAddress" resultType="java.lang.String" parameterType="java.lang.String">
+        select A.ADDRESS FROM AUTHORIZED A where A.ADDRESS=#{param}
+    </select>
+
+    <insert id="insertAuthorization">
+        insert INTO AUTHORIZED(ADDRESS)
+        values(#{param})
+    </insert>
+
+    <delete id="deleteAuthorization">
+        delete from AUTHORIZED where ID=#{id}
+    </delete>
+
+    <delete id="deleteAllAuthorization">
+        delete from AUTHORIZED where 1=1
+    </delete>
+
+</mapper>
