@@ -8,6 +8,17 @@ import java.util.Properties;
 @Component("propreader")
 public class PropertiesReader {
 
+    public String getProperty(String key) {
+        InputStream inStream = PropertiesReader.class.getClassLoader().getResourceAsStream("edu/bjtu/fileshare/utils/config/context.properties");
+        Properties prop = new Properties();
+        try {
+            prop.load(inStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return prop.getProperty(key);
+    }
+
     public String getFileLocation() {
         InputStream inStream = PropertiesReader.class.getClassLoader().getResourceAsStream("edu/bjtu/fileshare/utils/config/context.properties");
         Properties prop = new Properties();

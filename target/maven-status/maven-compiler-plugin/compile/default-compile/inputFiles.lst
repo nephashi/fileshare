@@ -16,6 +16,8 @@ D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\thread\AuthoriCl
 D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\controller\AdminController.java
 D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\dao\FileDao.java
 D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\controller\IndexController.java
+D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\service\DownloadRawFileService.java
 D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\entity\File.java
 D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\utils\PropertiesReader.java
 D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\service\AuthorizationService.java
+D:\intellijworkspace\fileshare\src\main\java\edu\bjtu\fileshare\controller\TmpDownloadController.java
