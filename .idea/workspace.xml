@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d0f7ae-621f-4bb4-acf0-0282e02bdc95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javatuples_javatuples_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/bjtu/fileshare/controller/TmpDownloadController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/bjtu/fileshare/service/DownloadRawFileService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/bjtu/fileshare/utils/PropertiesReader.class" afterPath="$PROJECT_DIR$/target/classes/edu/bjtu/fileshare/utils/PropertiesReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fileshare.war" afterPath="$PROJECT_DIR$/target/fileshare.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fileshare/WEB-INF/classes/edu/bjtu/fileshare/utils/PropertiesReader.class" afterPath="$PROJECT_DIR$/target/fileshare/WEB-INF/classes/edu/bjtu/fileshare/utils/PropertiesReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/fileshare_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/fileshare_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fileshare.iml" afterPath="$PROJECT_DIR$/fileshare.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/bjtu/fileshare/utils/PropertiesReader.java" afterPath="$PROJECT_DIR$/src/main/java/edu/bjtu/fileshare/utils/PropertiesReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/bjtu/fileshare/utils/config/context.properties" afterPath="$PROJECT_DIR$/src/main/java/edu/bjtu/fileshare/utils/config/context.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/bjtu/fileshare/utils/config/context.properties" afterPath="$PROJECT_DIR$/target/classes/edu/bjtu/fileshare/utils/config/context.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fileshare/WEB-INF/classes/edu/bjtu/fileshare/utils/config/context.properties" afterPath="$PROJECT_DIR$/target/fileshare/WEB-INF/classes/edu/bjtu/fileshare/utils/config/context.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1308,12 +1291,20 @@
       <workItem from="1516413426246" duration="2099000" />
       <workItem from="1516972367919" duration="12000" />
       <workItem from="1520335981635" duration="539000" />
-      <workItem from="1520336560721" duration="2314000" />
+      <workItem from="1520336560721" duration="2415000" />
     </task>
+    <task id="LOCAL-00001" summary="基本成品">
+      <created>1520472835904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1520472835904</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224343000" />
+    <option name="totallyTimeSpent" value="224444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1359,6 +1350,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="基本成品" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本成品" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
